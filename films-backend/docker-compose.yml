@@ -17,7 +17,7 @@ services:
     container_name: films-backend-api
     volumes:
       - ./app:/var/www/html/app
-      - ./config/virtualhosts/films.api.dev.conf:/etc/apache2/sites-enabled/products.api.dev.conf
+      - ./config/virtualhosts/films.api.dev.conf:/etc/apache2/sites-enabled/films.api.dev.conf
     ports:
       - "8080:80"
     depends_on:

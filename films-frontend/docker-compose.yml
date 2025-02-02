@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: films-frontend
+    volumes:
+      - ./app:/var/www/html/app
+      - ./config/virtualhosts/films.dev.com.conf:/etc/apache2/sites-enabled/films.dev.com.conf
+    ports:
+      - "8081:80"
