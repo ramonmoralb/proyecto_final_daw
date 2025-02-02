@@ -15,7 +15,8 @@ RUN apt-get install -y apache2 \
 RUN apt-get install -y libapache2-mod-php php-mysqli
 
 # Habilitar módulos de Apache
-RUN a2enmod rewrite headers
+RUN a2enmod rewrite 
+RUN a2enmod headers
 
 RUN service apache2 restart
 

@@ -8,10 +8,6 @@ RUN apt-get update && apt-get upgrade -y \
     && apt-get install -y apache2 \
     && apt-get clean
 
-# Habilita el módulo 'rewrite' de Apache
-RUN a2enmod rewrite
-# habilita los headers
-RUN a2enmod headers
 
 
 # Expón el puerto 80
