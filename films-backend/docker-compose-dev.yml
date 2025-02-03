@@ -4,24 +4,24 @@ services:
     container_name: films-backend-db
     ports:
       - "3307:3306"
-    restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbuser
       - MYSQL_DATABASE=films
     volumes:
-      - ./config/prod/mysql_dump:/docker-entrypoint-initdb.d
+      - ./config/dev/mysql_dump:/docker-entrypoint-initdb.d
       - mysql-data:/var/lib/mysql #Opcional
   app:
-    build: . 
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     container_name: films-backend-api
     volumes:
       - ./app:/var/www/html/app
-      - ./config/prod/virtualhosts/ # la url films.api.dev.conf:/etc/apache2/sites-enabled/films.api.dev.conf
+      - ./config/dev/virtualhosts/films.api.dev.conf:/etc/apache2/sites-enabled/films.api.dev.conf
     ports:
       - "8080:80"
-    restart: always
     depends_on:
       - db
 volumes:
