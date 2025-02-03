@@ -11,7 +11,7 @@ services:
       - MYSQL_DATABASE=films
     volumes:
       - ./config/dev/mysql_dump:/docker-entrypoint-initdb.d
-      - mysql-data:/var/lib/mysql #Opcional
+      - mysql-data:/var/lib/mysql
   app:
     build:
       context: .
