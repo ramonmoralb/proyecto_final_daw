@@ -18,7 +18,7 @@ services:
     container_name: films-backend-api
     volumes:
       - ./app:/var/www/html/app
-      - ./config/prod/virtualhosts/ # la url films.api.dev.conf:/etc/apache2/sites-enabled/films.api.dev.conf
+      - ./config/prod/virtualhosts/filmsramonproyectodaw.api.chickenkiller.com.conf:/etc/apache2/sites-enabled/filmsramonproyectodaw.api.chickenkiller.com.conf
     ports:
       - "8080:80"
     restart: always
