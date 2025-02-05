@@ -7,7 +7,7 @@ RUN apt-get update && apt-get upgrade -y
 
 # Instalación de Apache2 y PHP
 RUN apt-get install -y apache2 \
-    php -y \
+    php  \
     php-mysql \
     php-yaml \
     curl \
@@ -18,7 +18,6 @@ RUN apt-get install -y libapache2-mod-php php-mysqli
 RUN a2enmod rewrite 
 RUN a2enmod headers
 
-RUN service apache2 restart
 
 # Exposición del puerto 80
 EXPOSE 80
