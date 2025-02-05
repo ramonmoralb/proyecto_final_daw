@@ -17,7 +17,7 @@ RUN apt-get install -y libapache2-mod-php php-mysqli
 # Habilitar módulos de Apache
 RUN a2enmod rewrite 
 RUN a2enmod headers
-
+##
 
 # Exposición del puerto 80
 EXPOSE 80
