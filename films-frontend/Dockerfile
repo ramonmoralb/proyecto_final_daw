@@ -1,5 +1,5 @@
 ##imagen base 
-FROM debian
+FROM debian:latest
 
 LABEL org.opencontainers.image.authors="ramonmoreno.alu@iespacomolla.es"
 
