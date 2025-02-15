@@ -8,7 +8,9 @@ RUN apt-get update && apt-get upgrade -y \
     && apt-get install -y apache2 \
     && apt-get clean
 
-
+# Habilitar módulos de Apache
+RUN a2enmod rewrite 
+RUN a2enmod headers
 
 # Expón el puerto 80
 EXPOSE 80
