@@ -32,7 +32,9 @@ cd films-backend
 docker-compose -f docker-compose-dev.yml up -d
 ```
 Este comando descargará las imágenes necesarias, construirá los contenedores y pondrá en marcha el backend de la aplicación.
-Frontend
+
+
+### Frontend
 
 Para iniciar el contenedor de desarrollo del frontend, navega a la carpeta films-frontend y ejecuta el siguiente comando:
 
