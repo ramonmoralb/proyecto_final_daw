@@ -46,8 +46,20 @@ Este comando descargará las imágenes necesarias, construirá los contenedores 
 
 Una vez que ambos contenedores estén en funcionamiento, puedes acceder a la aplicación a través de los siguientes enlaces:
 
-    Backend: Accede al backend en http://films.api.dev.com:8080/
-    Frontend: Accede al frontend en http://films.dev.com:8081/
+    Backend: Accede al backend en http://films.api.dev.com:8080/  
+    Frontend: Accede al frontend en http://films.dev.com:8081/ 
+
+## Para que el navegador de tú máquina pueda resolver el dominio se debe añadir las siguientes instrucciones en el archivo hosts:
+
+```plaintext
+127.0.0.1 films.api.dev.com
+127.0.0.1 films.dev.com
+```
+# Ubicacón del archivo hosts:
+
+- **Windows:** `C:\Windows\System32\drivers\etc\hosts`
+- **Linux/macOS:** `/etc/hosts`
+
 #### 5. Parar los contenedores
 
 Para detener los contenedores, puedes usar el siguiente comando en cada carpeta (frontend y backend):
